@@ -10,12 +10,14 @@ class Triangle
   end
 
   def kind
-    if @a == @b && @a == @c
-      return :equilateral
-    elsif @a == @b || @a == @c || @b == @c
-      return :isosceles
-    else
-      return :scalene
+    if valid_triangle?
+      if @a == @b && @a == @c
+        return :equilateral
+      elsif @a == @b || @a == @c || @b == @c
+        return :isosceles
+      else
+        return :scalene
+      end
     end
   end
 
