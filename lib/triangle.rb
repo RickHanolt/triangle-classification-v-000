@@ -22,9 +22,7 @@ class Triangle
   end
 
   def valid_triangle?
-    if (@a <= 0 || @b <= 0 || @c <= 0) || ((@a + @b) <= @c || (@a + @c) <= @b || (@b + @c) <= @a)
-      raise TriangleError
-    end
+    (@a <= 0 || @b <= 0 || @c <= 0) || ((@a + @b) <= @c || (@a + @c) <= @b || (@b + @c) <= @a)
   end
 
 
